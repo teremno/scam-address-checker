@@ -188,7 +188,17 @@ def analyse(bs: Blockscout, address: str, max_pages: int, intended: str | None) 
         recipient = {"address": intended, "known_counterparty": il in cp, "lookalike_of": twins,
                      "is_scam": bool(rinfo.get("is_scam")), "is_contract": rinfo.get("is_contract"),
                      "tags": [t.get("name") for t in (rinfo.get("metadata") or {}).get("tags", []) or []],
-                     "verdict": "STOP" if (twins and il not in cp) or rinfo.get("is_scam") else ("OK" if il in cp else "NEW")}
+                     "verdict": "OK" if il in cp else "NEW"}
+        reasons = []
+        if rinfo.get("is_scam"):
+            reasons.append("Blockscout flags this address as scam")
+        if il in planted:
+            reasons.append(f"it entered your history through a fake/zero/spoofed transfer ({planted[il][:10]})")
+        if twins and il not in cp:
+            reasons.append("it copies the visible prefix/suffix of an address you used, but you never used this one")
+        if reasons:
+            recipient["verdict"] = "STOP"
+        recipient["reasons"] = reasons
 
     spoofed = [f for f in findings if f.get("spoofed")]
     risk = "HIGH" if any(c["losses"] for c in clusters) or lone_losses else ("MEDIUM" if clusters or spoofed or impersonators else ("LOW" if findings else "NONE"))
@@ -210,8 +220,9 @@ def to_markdown(r: dict) -> str:
     rc = r.get("recipient_check")
     if rc:
         L += ["## Recipient check", f"- `{rc['address']}` → **{rc['verdict']}**"]
+        L += [f"  - {x}" for x in rc.get("reasons", [])]
         if rc["lookalike_of"]:
-            L.append(f"- ⚠️ Looks like a known counterparty: {', '.join('`'+a+'`' for a in rc['lookalike_of'])}")
+            L.append(f"- ⚠️ Same visible pattern as: {', '.join('`'+a+'`' for a in rc['lookalike_of'])}")
         L.append("")
     L.append("## Lookalike addresses (same first and last characters)")
     if not r["lookalike_clusters"]:

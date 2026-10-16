@@ -1,0 +1,25 @@
+{
+ "address": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+ "chain_id": 1,
+ "generated": "2026-10-16T10:20:01+00:00",
+ "risk": "NONE",
+ "scanned": {
+  "token_transfers": 150,
+  "transactions": 50,
+  "api_calls": 5
+ },
+ "address_info": {
+  "is_contract": true,
+  "is_scam": false,
+  "ens": "vitalik.eth",
+  "tags": []
+ },
+ "lookalike_clusters": [],
+ "losses_to_planted": [],
+ "impersonators_of_this_wallet": [],
+ "fake_tokens": [],
+ "spoofed_transfers": [],
+ "suspicious_transfers": [],
+ "recipient_check": null,
+ "explorer": "https://eth.blockscout.com/address/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+}

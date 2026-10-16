@@ -1,7 +1,7 @@
 {
  "address": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
  "chain_id": 1,
- "generated": "2026-10-16T09:51:27+00:00",
+ "generated": "2026-10-16T10:19:57+00:00",
  "risk": "HIGH",
  "scanned": {
   "token_transfers": 300,
@@ -222,7 +222,11 @@
   "is_scam": true,
   "is_contract": false,
   "tags": [],
-  "verdict": "STOP"
+  "verdict": "STOP",
+  "reasons": [
+   "Blockscout flags this address as scam",
+   "it entered your history through a fake/zero/spoofed transfer (2024-05-03)"
+  ]
  },
  "explorer": "https://eth.blockscout.com/address/0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5"
 }

@@ -13,7 +13,7 @@ Address poisoning is a scam where an attacker creates an address with the same f
 | Spoofed history | transfers where the wallet appears as sender but the transaction was signed by someone else |
 | Losses | real value later sent to a planted address |
 | Impersonators | addresses that copy the **wallet's own** prefix/suffix, used to trick people who pay this wallet |
-| Recipient check | `--to <address>` returns **STOP** if it is a look-alike of a known counterparty or flagged as scam |
+| Recipient check | `--to <address>` returns **STOP** with reasons: Blockscout scam flag, planted in your history, or a look-alike you never used |
 
 Every finding links to **Blockscout Explorer** as evidence.
 
@@ -23,6 +23,24 @@ python checker.py 0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5 --to 0xd9A1C3788D81
 Risk HIGH: 2 lookalike groups, 4 fake tokens, 3 spoofed transfers.
 ```
 The report shows the fake `WВТC` token, the planted look-alikes `0xd9A1C378…3a91` and `0xD9A19256…3a91`, the spoofed transfers signed by other addresses, the real WBTC sent to the planted address, and **STOP** for the recipient. A busy clean wallet (`vitalik.eth`) returns `Risk NONE` on Ethereum, while on Optimism the same wallet returns `Risk MEDIUM`: two addresses that imitate `0xd8dA…6045` itself interacted with it (`--chain 10`).
+
+## Demo
+3-minute walkthrough: [demo/demo.mp4](demo/demo.mp4) (rebuild with `python demo/make_demo.py`).
+
+## Architecture
+```mermaid
+flowchart LR
+  A[Input: wallet, --to recipient, --chain] --> B[Blockscout PRO API]
+  B -->|address info, labels, is_scam| C[Detectors]
+  B -->|ERC-20 transfers + token reputation| C
+  B -->|native transactions| C
+  B -->|tx signer lookup| C
+  C --> D[Look-alike groups / planted addresses]
+  C --> E[Fake & homoglyph tokens]
+  C --> F[Spoofed transfers, losses, impersonators]
+  D & E & F --> G[Report: risk, STOP, Markdown + JSON, Explorer links]
+```
+Blockscout is the only data source: no node and no indexer of our own.
 
 ## Run
 ```
