@@ -1,0 +1,36 @@
+{
+ "address": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+ "chain_id": 10,
+ "generated": "2026-10-16T09:51:34+00:00",
+ "risk": "MEDIUM",
+ "scanned": {
+  "token_transfers": 100,
+  "transactions": 50,
+  "api_calls": 4
+ },
+ "address_info": {
+  "is_contract": true,
+  "is_scam": false,
+  "ens": "vitalik.eth",
+  "tags": []
+ },
+ "lookalike_clusters": [],
+ "losses_to_planted": [],
+ "impersonators_of_this_wallet": [
+  {
+   "address": "0xD8Da1E5c1D4a9B4E9bd00d3010224a48269C6045",
+   "first_seen": "2026-09-30T02:38:35.000000Z",
+   "link": "https://optimism.blockscout.com/address/0xD8Da1E5c1D4a9B4E9bd00d3010224a48269C6045"
+  },
+  {
+   "address": "0xD8dA599183Fbe3E32BA871d79cB878847dDc6045",
+   "first_seen": "2026-09-30T02:39:37.000000Z",
+   "link": "https://optimism.blockscout.com/address/0xD8dA599183Fbe3E32BA871d79cB878847dDc6045"
+  }
+ ],
+ "fake_tokens": [],
+ "spoofed_transfers": [],
+ "suspicious_transfers": [],
+ "recipient_check": null,
+ "explorer": "https://optimism.blockscout.com/address/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+}

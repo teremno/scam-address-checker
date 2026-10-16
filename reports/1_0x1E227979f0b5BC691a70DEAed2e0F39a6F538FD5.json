@@ -1,0 +1,228 @@
+{
+ "address": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
+ "chain_id": 1,
+ "generated": "2026-10-16T09:51:27+00:00",
+ "risk": "HIGH",
+ "scanned": {
+  "token_transfers": 300,
+  "transactions": 150,
+  "api_calls": 14
+ },
+ "address_info": {
+  "is_contract": false,
+  "is_scam": false,
+  "ens": null,
+  "tags": []
+ },
+ "lookalike_clusters": [
+  {
+   "pattern": "0x0743…b42b",
+   "genuine_guess": "0x07436Fd0b66d4fB4a197Ac28b651a2Fb402cb42b",
+   "lookalikes": [
+    {
+     "address": "0x07431198b4B18F160C32BaCe379AdA0D452CB42b",
+     "first_seen": "2024-09-12T23:30:47.000000Z",
+     "planted_at": null,
+     "real_value_sent_to_it": 0,
+     "link": "https://eth.blockscout.com/address/0x07431198b4B18F160C32BaCe379AdA0D452CB42b"
+    }
+   ],
+   "losses": []
+  },
+  {
+   "pattern": "0xD9A1…3a91",
+   "genuine_guess": null,
+   "lookalikes": [
+    {
+     "address": "0xd9A1C3788D81257612E2581A6ea0aDa244853a91",
+     "first_seen": "2024-05-03T09:17:35.000000Z",
+     "planted_at": "2024-05-03T09:17:35.000000Z",
+     "real_value_sent_to_it": 1,
+     "link": "https://eth.blockscout.com/address/0xd9A1C3788D81257612E2581A6ea0aDa244853a91"
+    },
+    {
+     "address": "0xD9A192566e41e0804C3D81588a2D15Be58853a91",
+     "first_seen": "2024-05-08T11:00:23.000000Z",
+     "planted_at": "2024-05-08T11:00:23.000000Z",
+     "real_value_sent_to_it": 0,
+     "link": "https://eth.blockscout.com/address/0xD9A192566e41e0804C3D81588a2D15Be58853a91"
+    }
+   ],
+   "losses": [
+    "0xd9A1C3788D81257612E2581A6ea0aDa244853a91"
+   ]
+  }
+ ],
+ "losses_to_planted": [],
+ "impersonators_of_this_wallet": [],
+ "fake_tokens": [
+  {
+   "symbol": "DAI",
+   "address": "0x7362de96703ab797156f3b1e3716323a358d7c76",
+   "reasons": [
+    "not the real DAI contract (0x6b17…1d0f)"
+   ],
+   "link": "https://eth.blockscout.com/token/0x7362de96703ab797156f3b1e3716323a358d7c76"
+  },
+  {
+   "symbol": "WВТC",
+   "address": "0x2e57249f1e5ac0bd3b9187d19120d54008b3d967",
+   "reasons": [
+    "symbol \"WВТC\" uses non-Latin look-alike letters to imitate WBTC",
+    "not the real WBTC contract (0x2260…c599)"
+   ],
+   "link": "https://eth.blockscout.com/token/0x2e57249f1e5ac0bd3b9187d19120d54008b3d967"
+  },
+  {
+   "symbol": "ETH",
+   "address": "0x9d314156d07ff9f2043cbb24679a8a82737da11c",
+   "reasons": [
+    "an ERC-20 named ETH: real ether is not a token"
+   ],
+   "link": "https://eth.blockscout.com/token/0x9d314156d07ff9f2043cbb24679a8a82737da11c"
+  },
+  {
+   "symbol": "ETH",
+   "address": "0x739352337c902c3874b95f14e81ebbcf1b7b262e",
+   "reasons": [
+    "an ERC-20 named ETH: real ether is not a token"
+   ],
+   "link": "https://eth.blockscout.com/token/0x739352337c902c3874b95f14e81ebbcf1b7b262e"
+  }
+ ],
+ "spoofed_transfers": [
+  {
+   "type": "fake_token_transfer",
+   "tx": "0x19a2e1554734218c534d86d37834e4886167fbc5e34e64a5bac673b55dc6c757",
+   "time": "2024-05-08T11:00:23.000000Z",
+   "token": "WВТC",
+   "token_address": "0x2e57249f1e5ac0bd3b9187d19120d54008b3d967",
+   "from": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
+   "to": "0xD9A192566e41e0804C3D81588a2D15Be58853a91",
+   "value": "1155288027670000000000",
+   "outgoing": true,
+   "reasons": [
+    "symbol \"WВТC\" uses non-Latin look-alike letters to imitate WBTC",
+    "not the real WBTC contract (0x2260…c599)"
+   ],
+   "link": "https://eth.blockscout.com/tx/0x19a2e1554734218c534d86d37834e4886167fbc5e34e64a5bac673b55dc6c757",
+   "initiator": "0x95ca88561a74DAC7d29B25EAa81F4e7D5AA336fF",
+   "spoofed": true
+  },
+  {
+   "type": "fake_token_transfer",
+   "tx": "0x6d802c369a8d18dd55eb881552e5386a6ec93ca1db6c9665cd490217b03aa0c4",
+   "time": "2024-05-06T16:15:23.000000Z",
+   "token": "ETH",
+   "token_address": "0x9d314156d07ff9f2043cbb24679a8a82737da11c",
+   "from": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
+   "to": "0xbc688723134C34d4454Ec47f96cc10B93a204783",
+   "value": "184000",
+   "outgoing": true,
+   "reasons": [
+    "an ERC-20 named ETH: real ether is not a token"
+   ],
+   "link": "https://eth.blockscout.com/tx/0x6d802c369a8d18dd55eb881552e5386a6ec93ca1db6c9665cd490217b03aa0c4",
+   "initiator": "0x582aED66b0dA16640B32589F2b77445Da47caA69",
+   "spoofed": true
+  },
+  {
+   "type": "fake_token_transfer",
+   "tx": "0x9147d74ef5749b7f27eb2e2528e5a611060b3f609b435f7f50ac87f49e5b957c",
+   "time": "2024-05-03T09:17:35.000000Z",
+   "token": "ETH",
+   "token_address": "0x739352337c902c3874b95f14e81ebbcf1b7b262e",
+   "from": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
+   "to": "0xd9A1C3788D81257612E2581A6ea0aDa244853a91",
+   "value": "50000",
+   "outgoing": true,
+   "reasons": [
+    "an ERC-20 named ETH: real ether is not a token"
+   ],
+   "link": "https://eth.blockscout.com/tx/0x9147d74ef5749b7f27eb2e2528e5a611060b3f609b435f7f50ac87f49e5b957c",
+   "initiator": "0x517DC8E50b8bf03A1D69c84d27bF96dC5A911Db2",
+   "spoofed": true
+  }
+ ],
+ "suspicious_transfers": [
+  {
+   "type": "fake_token_transfer",
+   "tx": "0x4979e7ca6330500006defdc0377bd3a13c5aeebad9e98289b182b672b006c1d5",
+   "time": "2025-07-08T23:49:11.000000Z",
+   "token": "DAI",
+   "token_address": "0x7362de96703ab797156f3b1e3716323a358d7c76",
+   "from": "0x191C9dC2cd214B6497fA32c5ca7792f807842DE3",
+   "to": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
+   "value": "1000000000000000000",
+   "outgoing": false,
+   "reasons": [
+    "not the real DAI contract (0x6b17…1d0f)"
+   ],
+   "link": "https://eth.blockscout.com/tx/0x4979e7ca6330500006defdc0377bd3a13c5aeebad9e98289b182b672b006c1d5"
+  },
+  {
+   "type": "fake_token_transfer",
+   "tx": "0x19a2e1554734218c534d86d37834e4886167fbc5e34e64a5bac673b55dc6c757",
+   "time": "2024-05-08T11:00:23.000000Z",
+   "token": "WВТC",
+   "token_address": "0x2e57249f1e5ac0bd3b9187d19120d54008b3d967",
+   "from": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
+   "to": "0xD9A192566e41e0804C3D81588a2D15Be58853a91",
+   "value": "1155288027670000000000",
+   "outgoing": true,
+   "reasons": [
+    "symbol \"WВТC\" uses non-Latin look-alike letters to imitate WBTC",
+    "not the real WBTC contract (0x2260…c599)"
+   ],
+   "link": "https://eth.blockscout.com/tx/0x19a2e1554734218c534d86d37834e4886167fbc5e34e64a5bac673b55dc6c757",
+   "initiator": "0x95ca88561a74DAC7d29B25EAa81F4e7D5AA336fF",
+   "spoofed": true
+  },
+  {
+   "type": "fake_token_transfer",
+   "tx": "0x6d802c369a8d18dd55eb881552e5386a6ec93ca1db6c9665cd490217b03aa0c4",
+   "time": "2024-05-06T16:15:23.000000Z",
+   "token": "ETH",
+   "token_address": "0x9d314156d07ff9f2043cbb24679a8a82737da11c",
+   "from": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
+   "to": "0xbc688723134C34d4454Ec47f96cc10B93a204783",
+   "value": "184000",
+   "outgoing": true,
+   "reasons": [
+    "an ERC-20 named ETH: real ether is not a token"
+   ],
+   "link": "https://eth.blockscout.com/tx/0x6d802c369a8d18dd55eb881552e5386a6ec93ca1db6c9665cd490217b03aa0c4",
+   "initiator": "0x582aED66b0dA16640B32589F2b77445Da47caA69",
+   "spoofed": true
+  },
+  {
+   "type": "fake_token_transfer",
+   "tx": "0x9147d74ef5749b7f27eb2e2528e5a611060b3f609b435f7f50ac87f49e5b957c",
+   "time": "2024-05-03T09:17:35.000000Z",
+   "token": "ETH",
+   "token_address": "0x739352337c902c3874b95f14e81ebbcf1b7b262e",
+   "from": "0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5",
+   "to": "0xd9A1C3788D81257612E2581A6ea0aDa244853a91",
+   "value": "50000",
+   "outgoing": true,
+   "reasons": [
+    "an ERC-20 named ETH: real ether is not a token"
+   ],
+   "link": "https://eth.blockscout.com/tx/0x9147d74ef5749b7f27eb2e2528e5a611060b3f609b435f7f50ac87f49e5b957c",
+   "initiator": "0x517DC8E50b8bf03A1D69c84d27bF96dC5A911Db2",
+   "spoofed": true
+  }
+ ],
+ "recipient_check": {
+  "address": "0xd9A1C3788D81257612E2581A6ea0aDa244853a91",
+  "known_counterparty": true,
+  "lookalike_of": [
+   "0xD9A192566e41e0804C3D81588a2D15Be58853a91"
+  ],
+  "is_scam": true,
+  "is_contract": false,
+  "tags": [],
+  "verdict": "STOP"
+ },
+ "explorer": "https://eth.blockscout.com/address/0x1E227979f0b5BC691a70DEAed2e0F39a6F538FD5"
+}
